@@ -12,7 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import project.model.DriverResult;
-import project.respository.DriverResultRepository;
+import project.repository.DriverResultRepository;
 
 public class DriversController implements Initializable {
 
