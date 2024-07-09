@@ -6,3 +6,11 @@
 ![](src/main/resources/project/img/showTables1.png)
 ## Resultado 2 de tablas
 ![](src/main/resources/project/img/showTables2.png)
+
+
+	Integrantes:
+	
+		- Kevin Steven Lema Coro
+		- Oswaldo Alejandro Alvarado Trivino
+		- Kevin Steven Herrera Baque
+		- Adonis Michael Plaza Jara
