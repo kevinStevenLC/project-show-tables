@@ -18,7 +18,7 @@ public class ConstructorResultRepository {
 		try {
 			// Establecer la conexion
 			DbConexion db_conexion = new DbConexion();
-			Connection conn = db_conexion.EstablecerConexion("bd_pruebas", "postgres", "12345", "postgresql");
+			Connection conn = db_conexion.EstablecerConexion("test_database", "postgres", "593321", "postgresql");
 
 			// Ejecutar la consulta
 			String sql = "SELECT\n"
