@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import project.model.DriversPoints;
 import project.repository.DriversPointsRepository;
 
-public class ConductorDriversController implements Initializable {
+public class DriversPointsController implements Initializable {
 
     @FXML
     private TableColumn<DriversPoints, String> ConductorNombres;
