@@ -25,52 +25,20 @@ public class App extends Application {
         // Enviando panel de control.
         controller.recivePanel(stage);
         // Enviando tablas de resultados y tablas de puntos
-        controller.reciveDrivers(FxmlTableDrivers(), FxmlTableDriversPoints());
-        controller.reciveConstructors(FxmlTableConstructors(), FxmlTableConstructorsPoints());
-
+        controller.reciveDrivers(GenerateFxmlTable("tableDrivers", "Drive Results"),
+                GenerateFxmlTable("tableDriversPoints", "Drive Points"));
+        controller.reciveConstructors(GenerateFxmlTable("tableConstructors", "Constructor Results"),
+                GenerateFxmlTable("tableConstructorsPoints", "Constructor Points"));
         stage.show();
     }
 
     @SuppressWarnings("exports")
-    public Stage FxmlTableDrivers() throws IOException {
+    public Stage GenerateFxmlTable(String file, String title) throws IOException {
         Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/fxml/tableDrivers.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/fxml/" + file + ".fxml"));
         Parent root = loader.load();
         stage.setScene(new Scene(root));
-        stage.setTitle("Consulta Conductores");
-
-        return stage;
-    }
-
-    @SuppressWarnings("exports")
-    public Stage FxmlTableDriversPoints() throws IOException {
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/fxml/tableDriversPoints.fxml"));
-        Parent root = loader.load();
-        stage.setScene(new Scene(root));
-        stage.setTitle("Consulta Conductores");
-
-        return stage;
-    }
-
-    @SuppressWarnings("exports")
-    public Stage FxmlTableConstructors() throws IOException {
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/fxml/tableConstructors.fxml"));
-        Parent root = loader.load();
-        stage.setScene(new Scene(root));
-        stage.setTitle("Consulta Constructores");
-
-        return stage;
-    }
-
-    @SuppressWarnings("exports")
-    public Stage FxmlTableConstructorsPoints() throws IOException {
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/fxml/tableConstructorsPoints.fxml"));
-        Parent root = loader.load();
-        stage.setScene(new Scene(root));
-        stage.setTitle("Consulta Constructores");
+        stage.setTitle(title);
 
         return stage;
     }
