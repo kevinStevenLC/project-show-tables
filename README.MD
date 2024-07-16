@@ -14,3 +14,4 @@
 		- Oswaldo Alejandro Alvarado Trivino
 		- Kevin Steven Herrera Baque
 		- Adonis Michael Plaza Jara
+		- Integrante random
