@@ -37,10 +37,10 @@ public class ConstructorController implements Initializable {
 	@FXML
 	void selectionMethod(ActionEvent event) {
 		int selectedYear = selectionYear.getValue();
-        System.out.println("Year selected: " + selectedYear);
-        // Limpiar la tabla antes de cargar nuevos datos
-        tableConstructors.getItems().clear();
-        cargarConstructores(selectedYear);
+		System.out.println("Year selected: " + selectedYear);
+		// Limpiar la tabla antes de cargar nuevos datos
+		tableConstructors.getItems().clear();
+		cargarConstructores(selectedYear);
 	}
 
 	@Override
@@ -56,7 +56,8 @@ public class ConstructorController implements Initializable {
 		selectionYear.setValue(2004);
 	}
 
-	void cargarConstructores(int año){
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	void cargarConstructores(int año) {
 		this.ColumnConstructorName.setCellValueFactory(new PropertyValueFactory("constructorName"));
 		this.ColumnRank.setCellValueFactory(new PropertyValueFactory("rank"));
 		this.ColumnTotalPoints.setCellValueFactory(new PropertyValueFactory("totalPoints"));
@@ -67,7 +68,6 @@ public class ConstructorController implements Initializable {
 		for (ConstructorResult rs : ls_c) {
 			tableConstructors.getItems().add(rs);
 		}
-
 
 	}
 

@@ -17,13 +17,13 @@ public class ConstructorPointsRepository {
         try {
             // Establecer la conexión
             DbConexion dbConexion = new DbConexion();
-            Connection conn = dbConexion.EstablecerConexion("bd_pruebas", "postgres", "12345", "postgresql");
+            Connection conn = dbConexion.EstablecerConexion("test_database", "postgres", "593321", "postgresql");
 
             // Ejecutar la consulta
             String sql = "SELECT c.name, SUM(cs.points) AS total_points\n"
-                       + "FROM constructors c\n"
-                       + "JOIN constructor_standings cs ON c.constructor_id = cs.constructor_id\n"
-                       + "GROUP BY c.name";
+                    + "FROM constructors c\n"
+                    + "JOIN constructor_standings cs ON c.constructor_id = cs.constructor_id\n"
+                    + "GROUP BY c.name";
             PreparedStatement statement = conn.prepareStatement(sql);
 
             ResultSet rs = statement.executeQuery();

@@ -17,13 +17,13 @@ public class DriversPointsRepository {
         try {
             // Establecer la conexión
             DbConexion dbConexion = new DbConexion();
-            Connection conn = dbConexion.EstablecerConexion("bd_pruebas", "postgres", "12345", "postgresql");
+            Connection conn = dbConexion.EstablecerConexion("test_database", "postgres", "593321", "postgresql");
 
             // Ejecutar la consulta
             String sql = "SELECT d.forename, SUM(ds.points) AS total_points\n"
-                       + "FROM drivers d\n"
-                       + "JOIN driver_standings ds ON d.driver_id = ds.driver_id\n"
-                       + "GROUP BY d.forename";
+                    + "FROM drivers d\n"
+                    + "JOIN driver_standings ds ON d.driver_id = ds.driver_id\n"
+                    + "GROUP BY d.forename";
             PreparedStatement statement = conn.prepareStatement(sql);
 
             ResultSet rs = statement.executeQuery();

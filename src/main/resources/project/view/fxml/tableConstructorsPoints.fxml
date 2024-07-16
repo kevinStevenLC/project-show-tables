@@ -12,7 +12,7 @@
    <children>
       <VBox alignment="CENTER" prefHeight="478.0" prefWidth="504.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="51.0" prefWidth="291.0" text="Puntos de los Constructor" textFill="#482dc2">
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="51.0" prefWidth="291.0" text="Puntos de los Constructores" textFill="#482dc2">
                <font>
                   <Font name="Cambria Math" size="24.0" />
                </font>
