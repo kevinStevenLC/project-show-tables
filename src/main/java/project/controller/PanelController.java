@@ -14,7 +14,9 @@ public class PanelController implements Initializable {
 
 	Stage stagePanel;
 	Stage stageDrivers;
+	Stage stageDriversPoints;
 	Stage stageConstructors;
+	Stage stageConstructorsPoints;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -25,12 +27,15 @@ public class PanelController implements Initializable {
 		this.stagePanel = stage;
 	}
 
-	public void reciveDrivers(@SuppressWarnings("exports") Stage stage) {
+	public void reciveDrivers(@SuppressWarnings("exports") Stage stage, @SuppressWarnings("exports") Stage stage_points) {
 		this.stageDrivers = stage;
+		this.stageDriversPoints = stage_points;
 	}
 
-	public void reciveConstructors(@SuppressWarnings("exports") Stage stage) {
+	public void reciveConstructors(@SuppressWarnings("exports") Stage stage,
+			@SuppressWarnings("exports") Stage stage_points) {
 		this.stageConstructors = stage;
+		this.stageConstructorsPoints = stage_points;
 	}
 
 	@FXML
@@ -39,9 +44,18 @@ public class PanelController implements Initializable {
 	}
 
 	@FXML
+	void showTableConstructorsPoints() {
+		stageConstructorsPoints.show();
+	}
+
+	@FXML
 	void showTableDrivers() throws IOException {
 		stageDrivers.show();
 
 	}
 
+	@FXML
+	void showTableDriversPoints() {
+		stageDriversPoints.show();
+	}
 }

@@ -9,17 +9,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0" prefWidth="397.0" style="-fx-background-color: #D6E6FB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.PanelController">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="397.0" style="-fx-background-color: #D6E6FB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.PanelController">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="226.0" prefWidth="410.0">
+      <VBox alignment="TOP_CENTER" prefHeight="307.0" prefWidth="397.0">
          <children>
-            <Label alignment="CENTER" prefHeight="42.0" prefWidth="397.0" text="Mostrar Tablas de Resultados">
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="397.0" text="Tablas de resultados y puntos">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
             <Separator maxWidth="-Infinity" prefHeight="3.0" prefWidth="332.0" style="-fx-background-color: black;" />
-            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="261.0" spacing="20.0">
+            <VBox alignment="CENTER" prefHeight="263.0" prefWidth="397.0" spacing="20.0">
                <children>
                   <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#showTableDrivers" prefHeight="29.0" prefWidth="200.0" style="-fx-background-color: #FCE9B1; -fx-border-color: #84B6F4; -fx-border-color: black;" text="Show Drivers">
                      <cursor>
@@ -30,6 +30,22 @@
                      </font>
                   </Button>
                   <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#showTableConstructors" prefWidth="200.0" style="-fx-background-color: #FCE9B1; -fx-border-color: #84B6F4; -fx-border-color: black;" text="Show Constructors">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="109.0" layoutY="108.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#showTableDriversPoints" prefHeight="29.0" prefWidth="200.0" style="-fx-background-color: #FCE9B1; -fx-border-color: #84B6F4; -fx-border-color: black;" text="Show Drivers Points">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="109.0" layoutY="181.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#showTableConstructorsPoints" prefHeight="29.0" prefWidth="200.0" style="-fx-background-color: #FCE9B1; -fx-border-color: #84B6F4; -fx-border-color: black;" text="Show Constructors Points">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

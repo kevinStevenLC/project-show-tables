@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.ConstructorPointsController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="478.0" prefWidth="504.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="51.0" prefWidth="291.0" text="Puntos de los Conductores" textFill="#482dc2">
+               <font>
+                  <Font name="Cambria Math" size="24.0" />
+               </font>
+            </Label>
+            <Separator prefHeight="45.0" prefWidth="504.0" />
+            <TableView fx:id="tableConstructor" prefHeight="379.0" prefWidth="523.0">
+              <columns>
+                <TableColumn fx:id="ConductorNombresConstructor" prefWidth="255.99998223781586" text="Nombres" />
+                <TableColumn fx:id="TotalPointsConstructor" prefWidth="243.33334350585938" text="Total Puntos" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</HBox>

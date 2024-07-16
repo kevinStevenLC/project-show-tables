@@ -22,10 +22,11 @@ public class App extends Application {
         stage.setTitle("Panel de control");
 
         PanelController controller = loader.getController();
-        // Enviando los 3 estados.
+        // Enviando panel de control.
         controller.recivePanel(stage);
-        controller.reciveDrivers(FxmlTableDrivers());
-        controller.reciveConstructors(FxmlTableConstructors());
+        // Enviando tablas de resultados y tablas de puntos
+        controller.reciveDrivers(FxmlTableDrivers(), FxmlTableDriversPoints());
+        controller.reciveConstructors(FxmlTableConstructors(), FxmlTableConstructorsPoints());
 
         stage.show();
     }
@@ -42,9 +43,31 @@ public class App extends Application {
     }
 
     @SuppressWarnings("exports")
+    public Stage FxmlTableDriversPoints() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/fxml/tableDriversPoints.fxml"));
+        Parent root = loader.load();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Consulta Conductores");
+
+        return stage;
+    }
+
+    @SuppressWarnings("exports")
     public Stage FxmlTableConstructors() throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("view/fxml/tableConstructors.fxml"));
+        Parent root = loader.load();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Consulta Constructores");
+
+        return stage;
+    }
+
+    @SuppressWarnings("exports")
+    public Stage FxmlTableConstructorsPoints() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/fxml/tableConstructorsPoints.fxml"));
         Parent root = loader.load();
         stage.setScene(new Scene(root));
         stage.setTitle("Consulta Constructores");
