@@ -20,17 +20,25 @@ public class DriversPointsRepository {
             Connection conn = dbConexion.EstablecerConexion("test_database", "postgres", "593321", "postgresql");
 
             // Ejecutar la consulta
-            String sql = "SELECT d.forename, SUM(ds.points) AS total_points\n"
-                    + "FROM drivers d\n"
-                    + "JOIN driver_standings ds ON d.driver_id = ds.driver_id\n"
-                    + "GROUP BY d.forename";
+            String sql = "SELECT " +
+                    "    d.forename || ' ' || d.surname AS driver_name, " +
+                    "    SUM(r.points) AS total_points " +
+                    "FROM " +
+                    "    results r " +
+                    "JOIN " +
+                    "    drivers d ON r.driver_id = d.driver_id " +
+                    "GROUP BY " +
+                    "    d.forename, d.surname " +
+                    "ORDER BY " +
+                    "    total_points DESC " +
+                    "LIMIT 50;";
             PreparedStatement statement = conn.prepareStatement(sql);
 
             ResultSet rs = statement.executeQuery();
 
             // Procesar los resultados
             while (rs.next()) {
-                String forename = rs.getString("forename");
+                String forename = rs.getString("driver_name");
                 int totalPoints = rs.getInt("total_points");
 
                 // Crear objeto Drivers usando el constructor adecuado

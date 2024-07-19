@@ -20,10 +20,13 @@ public class ConstructorPointsRepository {
             Connection conn = dbConexion.EstablecerConexion("test_database", "postgres", "593321", "postgresql");
 
             // Ejecutar la consulta
-            String sql = "SELECT c.name, SUM(cs.points) AS total_points\n"
-                    + "FROM constructors c\n"
-                    + "JOIN constructor_standings cs ON c.constructor_id = cs.constructor_id\n"
-                    + "GROUP BY c.name";
+            String sql = "SELECT d.name, " +
+                    "SUM(r.points) AS total_points " +
+                    "FROM results as r " +
+                    "JOIN constructors as d ON r.constructor_id = d.constructor_id " +
+                    "GROUP BY d.name " +
+                    "ORDER BY total_points DESC " +
+                    "LIMIT 50;";
             PreparedStatement statement = conn.prepareStatement(sql);
 
             ResultSet rs = statement.executeQuery();
